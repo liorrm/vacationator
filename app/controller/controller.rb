@@ -37,7 +37,7 @@ class Controller
 
 
   def find_destination
-    destination =Destination.where(season: @season, budget: @budget, activity: @activity)
+    destination =Destination.where(season: @season, cost: @budget, activity: @activity)
     if !destination
       @view.not_found
     end
