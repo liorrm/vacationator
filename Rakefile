@@ -1,5 +1,6 @@
 require_relative "config/environment"
 require 'rspec/core/rake_task'
+require "active_record"
 
 
 task :default => :spec

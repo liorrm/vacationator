@@ -1,5 +1,6 @@
-class Destination <ActiveRecord::Base
-  def initialize
-    @destinations = Destination.all
-  end
+require_relative '../../config/environment'
+require 'active_record'
+
+class Destination < ActiveRecord::Base
+
 end
