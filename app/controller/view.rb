@@ -1,33 +1,40 @@
 class View
-  def self.welcome
+  def welcome
     puts "Welcome to Vacationator"
     puts "Tell us a few things about your ideal vacation:"
-    get_season
   end
 
-  def self.get_season
-    puts "What season?"
-    Controller.input
-    puts "Thank you."
+  def get_season
+    seasons = %w(Winter Summer Spring Fall)
+    puts "Pick a season: "
+    seasons.each {|season| puts "-#{season}"}
   end
 
-  def self.get_budget
-    puts "Enter your budget based on the number of dollar signs:"
+  def get_budget
+    puts "Enter your budget in dollar amount:"
     puts "$: $100 - $500"
     puts "$$: $500 - $1000"
     puts "$$$: $1000+"
-    Controller.input
-    puts "Thank you."
   end
 
-  def self.activity
+  def activity
     puts "Choose an interest:"
-    puts "Live Music"
-    puts "Outdoors"
-    puts "Party"
-    puts "Shopping"
-    puts "Plastic Surgery"
-    Controller.input
-    puts "Thank you."
+    puts "-Live Music"
+    puts "-Outdoors"
+    puts "-Party"
+    puts "-Shopping"
+    puts "-Plastic Surgery"
+  end
+
+  def got_it(input)
+    puts "Thank you! You chose #{input}!"
+  end
+
+  def not_found
+    puts "Sorry, no destinations found."
+  end
+
+  def error_message
+    puts "Please choose one from the list above."
   end
 end
