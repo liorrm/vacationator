@@ -3,8 +3,6 @@ require "active_record"
 require "rspec"
 require "rake"
 require "sqlite3"
-#require_relative '../app/controller/*.rb'
-
 # require "pathname"
 
 
