@@ -37,4 +37,21 @@ class View
   def error_message
     puts "Please choose one from the list above."
   end
+
+  def result(destination)
+    puts "YOU SHOULD GO TO..."
+    sleep(0.8)
+    print "."
+    sleep(0.8)
+    print "."
+    sleep(0.8)
+    print "."
+    sleep(0.8)
+    puts "#{destination.first.name}!"
+    sleep(0.5)
+    puts "and here's why..."
+    sleep(0.5)
+    puts "#{destination.first.description}"
+  end
+
 end

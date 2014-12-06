@@ -1,14 +1,15 @@
 require_relative "view"
+require_relative '../../config/environment'
 
 class Controller
 
   def initialize(view)
     @view = view
-    # @destination = Destination.all
+    @destination = Destination.all
   end
 
   def self.input
-    gets.chomp
+    gets.chomp.downcase
   end
 
   def get_command
@@ -38,8 +39,10 @@ class Controller
 
   def find_destination
     destination =Destination.where(season: @season, cost: @budget, activity: @activity)
-    if !destination
-      @view.not_found
+    if destination.empty?
+      return @view.not_found
+    elsif destination.count == 1
+      @view.result(destination)
     end
   end
 
