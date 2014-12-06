@@ -15,4 +15,4 @@ Destination.create(name: "Los Angeles, CA", season: "winter", cost: "$$", activi
 
 Destination.create(name: "Hot Springs, AR", season: "summer", cost: "$$", activity: "outdoors", description: "Come to the gem of the Natural State!")
 
-Destination.create(name: "Oakland, CA", season: "fall", cost: "$", activity: "live music", description: "We have good music")
+Destination.create(name: "Oakland, CA", season: "fall", cost: "$", activity: "live music", description: "We have good music. For everything else, go to San Francisco")
